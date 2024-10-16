@@ -1,0 +1,3 @@
+TENSORRT_VERSION=10.5.0.18
+CUDA_USER_VERSION=12.6
+docker build -f tensorRT.dockerfile --no-cache --build-arg TENSORRT_VERSION=$TENSORRT_VERSION --build-arg CUDA_USER_VERSION=$CUDA_USER_VERSION --tag=my_tensorrt:$TENSORRT_VERSION .
