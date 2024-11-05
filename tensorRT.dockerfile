@@ -42,6 +42,8 @@ RUN apt-get update && \
         libxext6 \
         libxrender-dev \
         cmake && \
+    apt-get update && \
+    apt-get install -y python3-pip && \
     apt-get clean
 
 RUN cd /usr/local/bin && \
@@ -62,7 +64,7 @@ RUN cd /opt && \
     export PYTHON_VERSION=$(python3 --version 2>&1 | awk '{print $2}' | cut -d. -f1,2 | tr -d .) && \
     python3 -m pip install TensorRT-${TENSORRT_VERSION}/python/tensorrt-*-cp${PYTHON_VERSION}-none-linux_x86_64.whl --break-system-packages --ignore-installed && \
     python3 -m pip install TensorRT-${TENSORRT_VERSION}/python/tensorrt_lean-*-cp${PYTHON_VERSION}-none-linux_x86_64.whl --break-system-packages --ignore-installed && \
-    python3 -m pip install TensorRT-${TENSORRT_VERSION}/python/tensorrt_dispatch-*-cp${PYTHON_VERSION}-none-linux_x86_64.whl --break-system-packages --ignore-installed && \
+    python3 -m pip install TensorRT-${TENSORRT_VERSION}/python/tensorrt_dispatch-*-cp${PYTHON_VERSION}-none-linux_x86_64.whl --break-system-packages --ignore-installed 
     # Deprecated.
     # python3 -m pip install TensorRT-${TENSORRT_VERSION}/uff/uff-*-py2.py3-none-any.whl && \
     # python3 -m pip install TensorRT-${TENSORRT_VERSION}/graphsurgeon/graphsurgeon-*-py2.py3-none-any.whl && \
