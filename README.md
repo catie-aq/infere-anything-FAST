@@ -1,3 +1,2 @@
-those files ARE currently not working
-
-follow https://github.com/leimao/TensorRT-Docker-Image
+Scripts for installing TensorRT in a secure way via docker.
+Then infere with any .onnx model FAST !
