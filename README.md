@@ -1,2 +1,3 @@
-Scripts for installing TensorRT in a secure way via docker.
-Then infere with any .onnx model FAST !
+Scripts to infere with any .onnx model FAST !
+(if needded, TensorRT installation in a secure way via docker)
+
