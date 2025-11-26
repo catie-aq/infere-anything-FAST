@@ -1,6 +1,9 @@
 Scripts to infere with any .onnx model FAST !
 
-(if needded, TensorRT installation in a secure way via doctrt with the trtexec tool (to intall if needed!) with the command :
+convert .onnx to .trt with the trtexec tool (to install if needed!) with the command :
 trtexec --onnx=your_model.onnx --saveEngine=7_classes_fp16.trt --fp16
 
-Then run (and/or adapt the tensort.py script.
+Then run (and/or adapt) the inference script : inference_with_tensort.py
+
+Note : builder and dockerfile are only here to help install tensorRT
+
